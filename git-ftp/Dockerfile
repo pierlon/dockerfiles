@@ -5,6 +5,7 @@ LABEL maintainer=pierregordon@protonmail.com
 ENV GIT_FTP_VERSION 1.4.0
 
 RUN apk add --no-cache \
+        git \
         bash \
     && apk add --no-cache --virtual .build-deps \
         curl \
