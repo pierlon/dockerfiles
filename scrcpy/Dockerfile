@@ -29,6 +29,7 @@ RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositor
     cd / && \
     rm -rf scrcpy scrcpy-server.jar && \
     apk del .build-deps && \
+    rm -r /var/cache/apk/APKINDEX.* && \
     echo -e "#!/bin/sh\nscrcpy \$@" > init.sh && \
     chmod +x init.sh
 
