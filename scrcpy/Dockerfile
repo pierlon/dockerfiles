@@ -28,5 +28,9 @@ RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositor
     ninja install && \
     cd / && \
     rm -rf scrcpy scrcpy-server.jar && \
-    apk del .build-deps
+    apk del .build-deps && \
+    echo -e "#!/bin/sh\nscrcpy \$@" > init.sh && \
+    chmod +x init.sh
+
+ENTRYPOINT [ "/init.sh" ]
 
