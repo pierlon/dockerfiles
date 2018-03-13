@@ -20,3 +20,7 @@ $ docker run --rm -i -t --privileged \
     scrcpy [options]
 ```
 
+## Issues
+
+See the [FAQ](FAQ.md).
+
